@@ -1,0 +1,35 @@
+.form {
+  @include flexContainer(space-between, start, column);
+  @include boxSize(350px, 500px);
+  padding-top: 100px;
+  margin-left: 30px;
+  h2 {
+    @include heading(400, auto, #e1874d, left, none, none);
+    margin-bottom: 40px;
+  }
+  form {
+    width: 100%;
+    input,
+    textarea {
+      width: 100%;
+      padding-bottom: 15px;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid #ae302b;
+      color: #ae302b;
+      font-size: 16px;
+      font-weight: 400;
+      background: transparent;
+      margin-bottom: 45px;
+      &::placeholder {
+        color: #ae302b;
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+  }
+  span {
+    color: #ffffff;
+    font-size: 15px;
+  }
+}

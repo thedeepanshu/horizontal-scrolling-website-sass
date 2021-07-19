@@ -1,0 +1,48 @@
+@import "./allImport";
+
+.admin_box {
+  @include flexContainer(space-between, center, column);
+  @include boxSize(400px, 500px);
+  padding-top: 50px;
+  margin-left: 50px;
+  .admin_content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 100px);
+    grid-gap: 20px;
+    div {
+      @include flexContainer(space-around, start, column);
+      border-bottom: 0.2px solid #ae302b;
+      padding-left: 20px;
+      padding-bottom: 10px;
+      small {
+        color: #ae302b;
+        font-size: 10px;
+        font-weight: 400;
+      }
+      p {
+        @include para(23px, #e1874d, 1.3, 500);
+      }
+    }
+  }
+  .admin_design {
+    @include flexContainer(space-between, center, row);
+    width: 100%;
+    small {
+      font-size: 10px;
+      font-weight: 400;
+      margin-right: 20px;
+      color: #ffffff;
+    }
+    .line_design {
+      flex: 1;
+      background-color: #ae302b;
+      height: 1.6px;
+      .yellow_line {
+        @include boxSize(20%, 100%);
+        background-color: #e1874d;
+      }
+    }
+  }
+}

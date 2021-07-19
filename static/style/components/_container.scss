@@ -1,0 +1,86 @@
+.container {
+  @include flexContainer(center, start, row);
+  @include boxSize(100%, calc(100vh - 12vh));
+  position: relative;
+  padding: 1rem 3em;
+  h1 {
+    @include heading(400, 18rem, $bigText, center, -23px, 1);
+  }
+  #title {
+    @include link(12px, 400, underline, $smallText);
+    @include bottomLeft(absolute, 130px, 33.5%, -33.5%, 130px);
+    z-index: 2;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
+  .left__box {
+    @include flexContainer(center, start, column);
+    @include bottomLeft(absolute, 80px, 50px, -50px, 80px);
+    ul {
+      list-style-type: none;
+      li {
+        font-size: 9px;
+        margin-bottom: 10px;
+        color: #ffffff;
+        font-weight: 500;
+      }
+    }
+    p {
+      color: $smallText;
+      font-size: 9px;
+    }
+  }
+  .right__box {
+    @include bottomRight(absolute, 100px, 50px, 50px, 100px);
+    z-index: 2;
+    div {
+      @include boxSize(80px, 50px);
+      position: relative;
+    }
+    #aboutLink {
+      @include link(9px, normal, none, $smallText);
+      position: relative;
+      text-align: center;
+      span {
+        margin-left: 5px;
+        color: #ffffff;
+        font-size: 10px;
+      }
+    }
+  }
+  .number_box {
+    @include bottomRight(absolute, 35px, -45px, -45px, 35px);
+    transform: rotate(-90deg);
+    z-index: 1;
+    span {
+      font-size: 9rem;
+      letter-spacing: -10px;
+      color: #321211;
+    }
+  }
+  .top_box {
+    @include flexContainer(space-between, start, column);
+    @include topLeft(absolute, 20px, 150px, -150px, -20px);
+    @include boxSize(180px, 200px);
+    a {
+      @include link(12px, normal, underline, $smallText);
+    }
+    p {
+      @include para(9px, $smallText, 1.6, 500);
+      span {
+        float: right;
+      }
+    }
+    #line {
+      @include boxSize(70px, 1px);
+      background-color: $smallText;
+    }
+  }
+  .medium {
+    @include heading(400, 7.3rem, $bigText, left, -5px, 0.9);
+    margin-top: 100px;
+    span:nth-child(1) {
+      margin-left: 200px;
+    }
+  }
+}

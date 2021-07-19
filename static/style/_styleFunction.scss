@@ -1,0 +1,62 @@
+@mixin flexContainer($justify, $row, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $row;
+  flex-direction: $direction;
+}
+
+@mixin boxSize($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin heading($weight, $size, $color, $align, $letterSpace, $lineHeight) {
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+  text-align: $align;
+  letter-spacing: $letterSpace;
+  line-height: $lineHeight;
+}
+
+@mixin topRight($position, $top, $right, $x, $y) {
+  position: $position;
+  top: $top;
+  right: $right;
+  transform: translate($x $y);
+}
+
+@mixin topLeft($position, $top, $left, $x, $y) {
+  position: $position;
+  top: $top;
+  left: $left;
+  transform: translate($x $y);
+}
+
+@mixin bottomRight($position, $bottom, $right, $x, $y) {
+  position: $position;
+  bottom: $bottom;
+  right: $right;
+  transform: translate($x $y);
+}
+
+@mixin bottomLeft($position, $bottom, $left, $x, $y) {
+  position: $position;
+  bottom: $bottom;
+  left: $left;
+  transform: translate($x $y);
+}
+
+@mixin link($size, $weight, $decoration, $linkColor) {
+  font-size: $size;
+  font-weight: $weight;
+  text-decoration: $decoration;
+  color: $linkColor;
+}
+
+@mixin para($size, $color, $lineHeight, $weight) {
+  font-size: $size;
+  color: $color;
+  line-height: $lineHeight;
+  font-weight: $weight;
+}

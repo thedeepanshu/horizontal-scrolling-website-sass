@@ -1,0 +1,39 @@
+#service {
+  .service_container {
+    .heading {
+      display: flex;
+      flex-direction: column;
+      margin-top: 50px;
+      min-width: 60%;
+      h1 {
+        @include heading(400, 7.3rem, $bigText, center, -9px, 0.7);
+        margin: 0;
+      }
+      #service_left {
+        text-align: left;
+      }
+    }
+    .section_links {
+      @include flexContainer(space-between, start, column);
+      @include topLeft(absolute, 39%, 20%, -20%, -39%);
+      min-height: 100px;
+      a {
+        @include link(10px, 400, underline, $smallText);
+        text-transform: uppercase;
+      }
+    }
+    .center__box {
+      @include bottomRight(absolute, 80px, 15%, 15%, 80px);
+      min-width: 500px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      div {
+        text-align: left;
+        p {
+          @include para(10px, $smallText, 1.4, 400);
+          width: 180px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+#dropdown_menu {
+  background-color: #ae302b;
+  position: fixed;
+  inset: 0, 0, 0, 0;
+  top: -100%;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in;
+  &.active {
+    opacity: 1;
+    top: 0;
+    pointer-events: all;
+  }
+  .main__menu {
+    .link_list {
+      @include flexContainer(center, center, column);
+      @include topLeft(absolute, -100px, 35%, 100px, -35%);
+      min-width: 400px;
+      height: 100vh;
+      transform: rotate(-29deg);
+      div {
+        a {
+          @include link(6.7rem, 400, none, #000);
+        }
+      }
+    }
+  }
+}

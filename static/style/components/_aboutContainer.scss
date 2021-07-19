@@ -1,0 +1,8 @@
+.about_container {
+  &::after {
+    content: "";
+    @include topRight(absolute, 70px, 240px, 240px, -70px);
+    @include boxSize(400px, 250px);
+    background-color: $bigText;
+  }
+}
